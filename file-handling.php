@@ -1,14 +1,52 @@
 <?php
 
-if(isset($_POST['textdata']))
+if(isset($_POST['firstname']))
 {
-$data=$_POST['textdata'];
+$data=$_POST['firstname'];
 $fp = fopen('data.txt', 'a');
 fwrite($fp, $data);
 fclose($fp);
 }
 
-session_start();
+if(isset($_POST['lastname']))
+{
+$data=$_POST['lastname'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+
+if(isset($_POST['email']))
+{
+$data=$_POST['email'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+
+if(isset($_POST['uname']))
+{
+$data=$_POST['uname'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+
+if(isset($_POST['remail']))
+{
+$data=$_POST['remail'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+
+if(isset($_POST['password']))
+{
+$data=$_POST['password'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -49,7 +87,7 @@ session_start();
   <label for="uname">User Name:</label>
   <input type="text" name="username" required>
   <br>
-  <label for="passwor">Password:</label>
+  <label for="password">Password:</label>
   <input type="password" name="password" required>
   <br>
   <label for="remail">Recovery Email:</label>
@@ -57,15 +95,7 @@ session_start();
   <br>
   <input type="Reset">
   <br>
-<input type="submit">
-
-    
-
-   
-   
-  	
-
-
+  <input type="submit">
 
 </form>
 </body>
